@@ -40,7 +40,7 @@ string Ds18b20::read_temp_raw()
 	{
       frame += line;
 	}
-	frame = frame.substr( frame.find_last_of("=")+1 );
+	frame = frame.substr( frame.find_last_of("t=")+1 );//check if the t don't broke this
 	close_sensor();
 	return frame;
 }
