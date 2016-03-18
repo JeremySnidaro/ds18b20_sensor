@@ -16,6 +16,9 @@ int main()
         return -1;
     }	
 	// START stuff about the config file ......
+
+	// we will check on the main app if many_sensor if on 0 or 1 for 1
+	//just create one ds18b20 instance for more do a for loop and check the directory
 	int many_sensor = g_key_file_get_integer(gkf, "Sensor", "many_sensor", NULL);
 	cout << many_sensor << endl;
 /*	
