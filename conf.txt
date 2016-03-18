@@ -1,0 +1,16 @@
+#Config file
+
+[Raspberry]
+Numero raspberry = 
+GPIO = 
+
+[Database]
+ip_server = 
+user = 
+pwd =
+table = 
+port =
+
+[Sensor]
+sensor_file =
+time_between_two_value = 
