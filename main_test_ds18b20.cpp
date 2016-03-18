@@ -21,12 +21,13 @@ int main()
 	//just create one ds18b20 instance for more do a for loop and check the directory
 	int many_sensor = g_key_file_get_integer(gkf, "Sensor", "many_sensor", NULL);
 	cout << many_sensor << endl;
-/*	
 
 	// END stuff about the config file ......
 
 	// we need to free before leaving
 	g_key_file_free(gkf);
+
+/*	
 	Ds18b20 *sensor = new Ds18b20("test");
 	float temp; 
 	for (int i=0; i<10; i++)
@@ -35,7 +36,8 @@ int main()
 		cout << temp << endl;
 		sleep(1);
 	}
-	*/
+
+*/
 	return 0;
 }
 // how to use glib
