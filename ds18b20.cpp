@@ -31,22 +31,23 @@ void Ds18b20::close_sensor()
 	sensor.close();
 }
 
-void Ds18b20::read_temp_raw()
+string Ds18b20::read_temp_raw()
 {
 	open_sensor();
 	string line;
+	string frame;
     while( getline(sensor,line) )
 	{
       frame += line;
 	}
 	frame = frame.substr( frame.find_last_of("=")+1 );
 	close_sensor();
+	return frame;
 }
 
 float Ds18b20::read_temp()
 {
-	read_temp_raw();
-	float temperature = atoi( frame.c_str() ); 
+	float temperature = atoi( read_temp_raw().c_str() ); 
 	temperature = temperature / 1000;
 	return temperature;
 }
