@@ -14,7 +14,7 @@ port =
 [Sensor]
 time_between_two_value = 
 # many_sensor, put 0 for one sensor put 1 for use many sensor
-many_sensor =
+many_sensor = 0
 sensor_file =
 
 # we will check on the main app if many_sensor if on 0 or 1 for 1 just create one ds18b20 instance for more do a for loop and check the directory
