@@ -5,16 +5,19 @@
 using namespace std;
 
 const char* config_file = "./conf.txt";
+
 int main()
 {
 	GKeyFile* gkf;
 	gkf = g_key_file_new();
 	
 	// Loads the config file and tests that everything went OK .
-    if (!g_key_file_load_from_file(gkf, config_file, G_KEY_FILE_NONE, NULL)){
+    if (!g_key_file_load_from_file(gkf, config_file, G_KEY_FILE_NONE, NULL))
+	{
         fprintf (stderr, "Could not read config file %s\n", config_file);
         return -1;
     }	
+
 	// START stuff about the config file ......
 
 	// we will check on the main app if many_sensor if on 0 or 1 for 1

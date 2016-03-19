@@ -12,7 +12,8 @@ class Ds18b20
 		~Ds18b20();
 		string read_temp_raw();
 		float read_temp();
-		void open_sensor();
+		int open_sensor();
 		void close_sensor();
+		int crc_check(string raw_frame);
 	
 };
