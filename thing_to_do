@@ -1,0 +1,20 @@
+code the algorithm for the crc_check 
+
+test find function in crc_check
+
+test find_last_of with t=
+
+test read_temp_raw function when crc_check is YES ( normal use) and when is NO
+
+test the read_temp function when read_temp_raw use cerr
+
+check if glib is installed in the raspberry and if the makefile line to link the 
+library is OK
+
+test configure.sh script, especially the echo part
+and if anything is OK with sudo
+
+Handling error with try catch and throw in the class
+
+write the code in main to use multiple sensor or not
+with config.txt file ( many_sensor at 0 or 1 )
