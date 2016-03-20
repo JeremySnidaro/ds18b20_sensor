@@ -1,6 +1,7 @@
 #include <iostream>
 #include "ds18b20.h"
 #include "unistd.h"
+#include <stdlib.h> // for system
 #include <glib.h> 
 using namespace std;
 
@@ -29,8 +30,15 @@ int main()
 
 	// we need to free before leaving
 	g_key_file_free(gkf);
-
+/*
+	if (many_sensor == 0)
+	{
+		// this don't work but its the idea
+		string file_sensor = system("ls /sys/bus/w1/devices/w1_bus_master1/ | grep '^28'") ;
+	}
+*/
 /*	
+
 	Ds18b20 *sensor = new Ds18b20("test");
 	float temp; 
 	for (int i=0; i<10; i++)
