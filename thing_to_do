@@ -13,7 +13,7 @@ check if glib is installed in the raspberry and if the makefile line to link the
 library is OK
 
 test configure.sh script, especially the echo part
-and if anything is OK with sudo
+and if anything is OK with /usr/sbin/ or if i need to use sudo
 
 Handling error with try catch and throw in the class
 
