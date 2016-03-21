@@ -1,11 +1,31 @@
 #include <iostream>
 #include <glib.h>  // to read config file
+#include <dirent.h> // to see file on directory
+#include <vector>
 
 #include "ds18b20.h"
 
 using namespace std;
 
 const char* config_file = "./conf.txt";
+
+vector<string> list_dir (const char *path)
+{
+	vector<string> files;
+
+    struct dirent *entry;
+    int ret = 1;
+    DIR *dir;
+    dir = opendir (path);
+
+    while ((entry = readdir (dir)) != NULL)
+	{
+		files.push_back(entry->d_name);
+    }
+	closedir(dir);
+	return files;
+
+}
 
 int main()
 {
@@ -30,13 +50,23 @@ int main()
 
 	// we need to free before leaving
 	g_key_file_free(gkf);
-/*
+	vector<string> sensor;
 	if (many_sensor == 0)
 	{
-		// this don't work but its the idea
-		string file_sensor = system("ls /sys/bus/w1/devices/w1_bus_master1/ | grep '^28'") ;
+		sensor = list_dir("/sys/bus/w1/devices/w1_bus_master1/");
+		cout << sensor[0];
+	    //Ds18b20 *sensor = new Ds18b20( sensor[0] );
+		//string file_sensor = system("ls /sys/bus/w1/devices/w1_bus_master1/ | grep '^28'") ;
 	}
-*/
+	else if(many_sensor == 1)
+	{
+		
+	}
+	else
+	{
+		cerr << "Error please make sure many_sensor \
+		variable on conf.txt is on 1 or 0" << endl;
+	}
 /*	
 
 	Ds18b20 *sensor = new Ds18b20("test");
