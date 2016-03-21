@@ -7,9 +7,9 @@
 
 static int count_crc_error;
 
-Ds18b20::Ds18b20(const char* path_to_sensor)
+Ds18b20::Ds18b20(string path_to_sensor)
 {
-	sensor_file = path_to_sensor;
+	sensor_file =  path_to_sensor.c_str();
 }
 
 Ds18b20::~Ds18b20()

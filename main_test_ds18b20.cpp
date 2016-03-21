@@ -62,12 +62,12 @@ int main()
 
 	// we need to free before leaving
 	g_key_file_free(gkf);
-	vector<string> sensor;
+	vector<string> sensor_list;
 	if (many_sensor == 0)
 	{
-		sensor = list_dir("/sys/bus/w1/devices/w1_bus_master1/");
-		cout << sensor[0];
-	    Ds18b20 *sensor = new Ds18b20( sensor[0] );
+		sensor_list = list_dir("/sys/bus/w1/devices/w1_bus_master1/");
+		cout << sensor_list[0];
+	    Ds18b20 *sensor = new Ds18b20( sensor_list[0] );
 		//string file_sensor = system("ls /sys/bus/w1/devices/w1_bus_master1/ | grep '^28'") ;
 	}
 	else if(many_sensor == 1)
