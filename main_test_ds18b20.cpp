@@ -54,7 +54,7 @@ int main()
 	if (many_sensor == 0)
 	{
 		sensor = list_dir("/sys/bus/w1/devices/w1_bus_master1/");
-		cout << sensor[0];
+		cout << sensor[1];
 	    //Ds18b20 *sensor = new Ds18b20( sensor[0] );
 		//string file_sensor = system("ls /sys/bus/w1/devices/w1_bus_master1/ | grep '^28'") ;
 	}
