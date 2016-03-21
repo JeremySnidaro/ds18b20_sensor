@@ -23,3 +23,4 @@ after this put an another sensor on the same 1 wire and test it
 
 test class to send query in c++ and add it to the main class(create one)
 
+check the cpu utilization when we use the sensor
