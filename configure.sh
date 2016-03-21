@@ -1,7 +1,7 @@
 #!/bin/sh
 
-sudo modeprobe w1-gpio
-sudo modeprobe w1-therm
+/usr/sbin/modeprobe w1-gpio
+/usr/sbin/modeprobe w1-therm
 
 # check if the two line needed in /boot/config.txt is present
 # ....
