@@ -69,9 +69,9 @@ int main()
 	vector<string> sensor_list;
 	if (many_sensor == 0)
 	{
-		sensor_list = list_dir("/sys/bus/w1/devices/w1_bus_master1/");
+		sensor_list = list_dir( "/sys/bus/w1/devices/w1_bus_master1/" );
 		cout << sensor_list[0];
-	    Ds18b20 *sensor = new Ds18b20(base_dir + sensor_list[0] + "/w1_slave" );
+	    Ds18b20 *sensor = new Ds18b20( base_dir + sensor_list[0] + "/w1_slave" );
 		float temp; 
 		for (int i=0; i<10; i++)
 		{
