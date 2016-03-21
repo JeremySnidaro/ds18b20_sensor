@@ -2,8 +2,10 @@
 #include <fstream> // to open file ( the sensor here)
 #include <string> // to use find function
 #include <stdlib.h> //to use atoi
+
 #include "ds18b20.h"
 
+static int count_crc_error;
 
 Ds18b20::Ds18b20(const char* path_to_sensor)
 {

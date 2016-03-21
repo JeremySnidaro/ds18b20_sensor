@@ -1,8 +1,8 @@
 #include <iostream>
+#include <glib.h>  // to read config file
+
 #include "ds18b20.h"
-#include "unistd.h"
-#include <stdlib.h> // for system
-#include <glib.h> 
+
 using namespace std;
 
 const char* config_file = "./conf.txt";
