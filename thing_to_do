@@ -1,3 +1,6 @@
+check python_temp_reader.py class and use them to write the c++ one
+focus on the try with counter for error and incomplete to say when it's finish and the while
+
 test find function in crc_check
 
 test find_last_of with t=
@@ -16,3 +19,5 @@ Handling error with try catch and throw in the class
 
 write the code in main to use multiple sensor or not
 with config.txt file ( many_sensor at 0 or 1 )
+
+test class to send query in c++ and add it to the main class(create one)
