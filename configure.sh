@@ -1,5 +1,6 @@
 #!/bin/sh
-
+# lsmod to see the modeprobe currently in use
+# modeinfo w1_gpio to have more information about it
 /usr/sbin/modeprobe w1-gpio
 /usr/sbin/modeprobe w1-therm
 
