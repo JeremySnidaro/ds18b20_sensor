@@ -6,3 +6,6 @@ http://lazyfoo.net/tutorials/SDL/01_hello_SDL/linux/cli/index.php
 
 raspberry modeprobe sudo or not write it on config file ? :
 https://www.raspberrypi.org/forums/viewtopic.php?f=37&t=35508
+ 
+list_dir in c++ :
+http://stackoverflow.com/questions/306533/how-do-i-get-a-list-of-files-in-a-directory-in-c
