@@ -1,0 +1,69 @@
+#include <iostream>
+
+
+#include <sys/time.h>
+
+#include <stdio.h>
+
+#include <mysql.h>
+//https://softexpert.wordpress.com/2007/10/18/how-to-connect-to-a-mysql-db-using-c-linux/
+//http://www.nitecon.com/tutorials-articles/develop/cpp/c-mysql-beginner-tutorial/
+
+using namespace std;
+//on imagine pour le moment qu'une carte debloque l'acces a toute les portes
+int main(int argc , char* argv[])
+
+{
+  MYSQL_RES *result;
+
+  MYSQL_ROW row;
+
+  MYSQL *connection, mysql;
+
+  int state;
+
+  
+  mysql_init(&mysql);
+
+  connection = mysql_real_connect(&mysql,"127.0.0.1","jeremy","hello","user_carte",0,0,0);
+
+  if (connection == NULL)
+
+  {
+
+  printf(mysql_error(&mysql));
+
+  return 1;
+
+  }
+
+
+
+  state = mysql_query(connection,"SELECT *FROM `id_carte` WHERE `10` = 42");//42 sera la valeur de la carte
+  //on verifie si elle est presente dans la bdd
+  
+
+  if (state !=0)
+
+  {
+
+  printf(mysql_error(connection));
+
+  return 1;
+
+  }
+  int nb_element = mysql_num_rows(result);
+  if(nb_element)//si l'on trouve quelque chose
+  {
+    //ouvrir gache //dans le cas objet on renvoie true 
+  }
+ 
+    
+  mysql_free_result(result);
+
+  mysql_close(connection);
+
+
+  return 0;
+
+};

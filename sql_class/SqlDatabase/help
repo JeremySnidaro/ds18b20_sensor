@@ -1,0 +1,15 @@
+https://softexpert.wordpress.com/2007/10/18/how-to-connect-to-a-mysql-db-using-c-linux/
+
+
+http://www.nitecon.com/tutorials-articles/develop/cpp/c-mysql-beginner-tutorial/
+
+
+http://www.codingfriends.com/index.php/2010/02/17/mysql-connection-example/
+
+
+
+https://sandeepghai.wordpress.com/2011/08/07/linking-of-mysql-database-with-c-on-linux-machine/
+
+
+Compilation :
+g++ Sql_Database.cpp  -I/usr/include/mysql /usr/lib/x86_64-linux-gnu/libmysqlclient.so.18
