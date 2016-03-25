@@ -1,7 +1,6 @@
 #!/bin/sh
 # lsmod to see the modeprobe currently in use
 # modeinfo w1_gpio to have more information about it
-# we can also write it in /etc/modules but we need root
 echo w1-gpio >> /etc/modules 
 echo w1-therm >> /etc/modules 
 
