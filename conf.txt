@@ -1,7 +1,7 @@
 # Config file
 
 [Raspberry]
-Numero raspberry = 
+Numero_raspberry = 
 GPIO = 
 
 [Database]
