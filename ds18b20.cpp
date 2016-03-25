@@ -5,7 +5,7 @@
 
 #include "ds18b20.h"
 
-static int count_crc_error;
+static int count_crc_error = 0;
 
 Ds18b20::Ds18b20(string path_to_sensor)
 {
@@ -42,6 +42,7 @@ int Ds18b20::crc_check(string raw_frame)
 	}
 	else
 	{
+		count_crc_error += 1;
 		return -1;
 	}
 }
@@ -63,11 +64,14 @@ string Ds18b20::read_temp_raw()
 	}
 	else
 	{
-		cerr << "Error CRC check" << endl;
+		if( count_crc_error > 4 )
+		{ 
+			cerr << "Too much CRC check error check the sensor" << endl;		
+			exit(-1);
+		}
+		cerr << "Error CRC check count_crc_error = " << count_crc_error << endl;
 		close_sensor();
 		read_temp_raw();
-		// put a if here when we have 5 following crc check error
-		// exit the program and print error
 	}
 
 }
