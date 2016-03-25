@@ -8,7 +8,7 @@ echo w1-therm >> /etc/modules
 # check if the two line needed in /boot/config.txt is present
 # ....
 # if the two line is not present write it at the end
-echo \#1-wire setting \n dtoverlay=w1-gpio,gpiopin=4 > /boot/config.txt
+echo "#1-wire setting \ndtoverlay=w1-gpio,gpiopin=4" >> /boot/config.txt
 #											not sure if gpiopin=4 is needed
 # else do nothing reboot is not needed if the two line is already present
 
