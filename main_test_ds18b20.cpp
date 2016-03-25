@@ -16,7 +16,6 @@ vector<string> list_dir (const char *path)
 	vector<string> files;
 
     struct dirent *entry;
-    int ret = 1;
     DIR *dir;
     dir = opendir (path);
 
