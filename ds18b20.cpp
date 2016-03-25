@@ -60,7 +60,6 @@ string Ds18b20::read_temp_raw()
 
 	if( crc_check(raw_frame) )
 	{
-		cerr << "everything is OK" << endl;		
 		close_sensor();
 		return raw_frame;
 	}

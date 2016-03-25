@@ -1,7 +1,5 @@
 add logfile to handle error log especially for crc
 
-test the read_temp function when read_temp_raw use cerr
-
 test configure.sh script, especially the echo part
 and if anything is OK with /usr/sbin/ or if i need to use sudo
 
