@@ -81,8 +81,11 @@ float Ds18b20::read_temp()
 
 	float temperature = atoi( str_temperature.c_str() ); 
 	temperature = temperature / 1000;
+	float temperature_round = temperature * 100;
+	temperature_round = int(temperature_round);
+	temperature_round /= 100;
 
-	return temperature;
+	return temperature_round;
 }
 
 
