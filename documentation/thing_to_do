@@ -19,3 +19,4 @@ after this put an another sensor on the same 1 wire and test it
 
 test class to send query in c++ and add it to the main class(create one)
 
+change the path to conf.txt in absolute path to /etc/default at the end of the project
