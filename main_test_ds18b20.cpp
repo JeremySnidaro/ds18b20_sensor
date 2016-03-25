@@ -60,11 +60,11 @@ int main()
 	//just create one ds18b20 instance for more do a for loop and check the directory
 	int many_sensor = g_key_file_get_integer(gkf, "Sensor", "many_sensor", NULL);
 	cout << many_sensor << endl;
+	// we need to free before leaving
+	g_key_file_free(gkf);
 
 	// END stuff about the config file ......
 
-	// we need to free before leaving
-	g_key_file_free(gkf);
 	vector<string> sensor_list;
 	if (many_sensor == 0)
 	{
