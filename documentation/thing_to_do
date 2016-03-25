@@ -1,8 +1,3 @@
-check python_temp_reader.py class and use them to write the c++ one
-focus on the try with counter for error and incomplete to say when it's finish and the while
-
-test find function in crc_check
-
 add logfile to handle error log especially for crc
 
 test read_temp_raw function when crc_check is YES ( normal use) and when is NO
