@@ -7,8 +7,6 @@ test read_temp_raw function when crc_check is YES ( normal use) and when is NO
 
 test the read_temp function when read_temp_raw use cerr
 
-check if glib is installed in the raspberry and if the makefile line to link the 
-library is OK
 
 test configure.sh script, especially the echo part
 and if anything is OK with /usr/sbin/ or if i need to use sudo
