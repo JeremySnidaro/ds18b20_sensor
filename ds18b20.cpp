@@ -38,6 +38,7 @@ int Ds18b20::crc_check(string raw_frame)
 	if( raw_frame.find("YES") != string::npos )
 	{
 		// find return npos if he not found the string
+		count_crc_error = 0;
 		return 1;
 	}
 	else
