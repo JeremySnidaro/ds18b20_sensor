@@ -11,8 +11,6 @@ test the read_temp function when read_temp_raw use cerr
 test configure.sh script, especially the echo part
 and if anything is OK with /usr/sbin/ or if i need to use sudo
 
-Handling error with try catch and throw in the class
-
 write the code in main to use multiple sensor or not
 with config.txt file ( many_sensor at 0 or 1 )
 after this put an another sensor on the same 1 wire and test it
