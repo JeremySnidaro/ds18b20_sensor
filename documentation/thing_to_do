@@ -3,8 +3,6 @@ focus on the try with counter for error and incomplete to say when it's finish a
 
 test find function in crc_check
 
-test find_last_of with t=
-
 test read_temp_raw function when crc_check is YES ( normal use) and when is NO
 
 test the read_temp function when read_temp_raw use cerr
