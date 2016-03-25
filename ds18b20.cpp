@@ -86,6 +86,7 @@ float Ds18b20::read_temp()
 	temperature_round /= 10;
 
 	return temperature_round;
+	// we get temperature like this 21.3 but if we have 21.39 we will get 21.3 not 21.4
 }
 
 
