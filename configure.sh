@@ -3,6 +3,9 @@
 # lsmod to see the modeprobe currently in use
 # modinfo w1_gpio to have more information about it, in raspberry a simple user can use
 # this command but in debian you need to be root for modinfo
+
+# Care if you use Red Hat/Fedora core/Cent OS 
+# the file need to be /etc/modules.conf
 echo w1-gpio >> /etc/modules 
 echo w1-therm >> /etc/modules 
 
