@@ -1,7 +1,8 @@
 add logfile to handle error log especially for crc
 
 check if when i write in /etc/modules i need a reboot or not and adapt the script 
-configure.sh
+configure.sh that seem with need to reboot because the kernel load module in 
+/etc/modules at the boot
 
 write the code in main to use multiple sensor or not
 with config.txt file ( many_sensor at 0 or 1 )
