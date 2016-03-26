@@ -5,6 +5,7 @@ configure.sh that seem with need to reboot because the kernel load module in
 /etc/modules at the boot
 
 read 'How linux works' book for the compilation and handling source part, see also make and thing about init.d, /etc/default ... P329+
+see also the pdf on my tablet about debian adminitration
 
 write the code in main to use multiple sensor or not
 with config.txt file ( many_sensor at 0 or 1 )
