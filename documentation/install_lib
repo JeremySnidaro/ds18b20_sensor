@@ -1,3 +1,4 @@
 apt-get install glib-2.0
 libglib2.0-dev
 
+https://developer.gnome.org/glib/stable/glib-Key-value-file-parser.html
