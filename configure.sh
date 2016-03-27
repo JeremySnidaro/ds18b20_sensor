@@ -24,7 +24,7 @@ then
 	#											not sure if gpiopin=4 is needed
 fi
 
-if  change  ;
+if  $change  ;
 then
 	echo "Reboot is needed to apply the configuration, reboot in 5 seconds"
 	sleep 5
