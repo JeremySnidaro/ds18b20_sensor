@@ -2,7 +2,6 @@
 
 [Raspberry]
 Numero_raspberry = 
-GPIO = 
 
 [Database]
 ip_server = 
@@ -15,5 +14,5 @@ port =
 time_between_two_value = 
 # many_sensor, put 0 for one sensor put 1 for use many sensor
 many_sensor = 0
-sensor_file =
+# sensor_file = // maybe when we have multiple sensor and only want to use one
 

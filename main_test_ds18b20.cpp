@@ -42,7 +42,6 @@ vector<string> list_dir (const char *path)
 
 int main()
 {
-	string base_dir = "/sys/bus/w1/devices/";	
 
 	GKeyFile* gkf;
 	gkf = g_key_file_new();
@@ -64,6 +63,8 @@ int main()
 
 	// END stuff about the config file ......
 
+
+	string base_dir = "/sys/bus/w1/devices/";	
 	vector<string> sensor_list;
 	if (many_sensor == 0)
 	{
