@@ -1,9 +1,5 @@
 add logfile to handle error log especially for crc
 
-check if when i write in /etc/modules i need a reboot or not and adapt the script 
-configure.sh that seem with need to reboot because the kernel load module in 
-/etc/modules at the boot
-
 read 'How linux works' book for the compilation and handling source part, see also make and thing about init.d, /etc/default ... P329+
 see also the pdf on my tablet about debian adminitration
 
