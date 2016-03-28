@@ -13,6 +13,7 @@ App::App (const char* path_config_file)
 	config_file = path_config_file;
 	vector<string> sensor_list = list_sensor
 							   	("/sys/bus/w1/devices/w1_bus_master1/");
+	config = load_config (config_file);
 }
 
 App::~App()

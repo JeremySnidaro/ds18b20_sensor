@@ -25,6 +25,7 @@ class App
 {
 
 	const char* config_file;
+	configuration config;
 
 	public :
 		App (const char* path_config_file);
