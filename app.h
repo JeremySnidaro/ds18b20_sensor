@@ -27,10 +27,11 @@ class App
 	const char* config_file;
 	configuration config;
 
+	configuration load_config();
+
 	public :
 		App (const char* path_config_file);
 		~App();
 		vector<string> list_sensor (const char* path);
-		configuration load_config();
 
 };
