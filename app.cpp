@@ -52,11 +52,11 @@ configuration App::load_config()
 
 
 	// [Sensor]
-	config.time_between_two_value = g_key_file_get_double 
-												   (gkf,
-													"Sensor",
-													"time_between_two_value",
-													NULL);
+	//config.time_between_two_value = g_key_file_get_double 
+	//											   (gkf,
+	//												"Sensor",
+	//												"time_between_two_value",
+	//												NULL);
 
 	config.many_sensor = g_key_file_get_integer (gkf,
 											 	 "Sensor", 
