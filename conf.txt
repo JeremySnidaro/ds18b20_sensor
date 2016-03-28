@@ -1,17 +1,17 @@
 # Config file
 
 [Raspberry]
-Numero_raspberry = 
+Numero_raspberry = 42 
 
 [Database]
-ip_server = 
-user = 
-pwd =
-table = 
-port =
+ip_server = 192.168.0.1
+user = tux
+pwd = gnu
+table = room
+port = 334
 
 [Sensor]
-time_between_two_value = 
+time_between_two_value = 32.13 
 # many_sensor, put 0 for one sensor put 1 for use many sensor
 many_sensor = 0
 # sensor_file = // maybe when we have multiple sensor and only want to use one
