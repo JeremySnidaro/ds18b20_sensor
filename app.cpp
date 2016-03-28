@@ -8,19 +8,18 @@
 using namespace std;
 
 
-App::App()
+App::App (const char* path_config_file)
 {
-	config_file = "./conf.txt";
+	config_file = path_config_file;
 	vector<string> sensor_list = list_sensor
-							   	("/sys/bus/w1/devices/w1_bus_master1/" );
-
+							   	("/sys/bus/w1/devices/w1_bus_master1/");
 }
 
 App::~App()
 {
 }
 
-configuration App::load_config (const char* path)
+configuration App::load_config()
 {
 	configuration config;
 	GKeyFile* gkf;
