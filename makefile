@@ -13,7 +13,7 @@ OBJ_NAME = no_name_for_the_moment
 
 #This is the target that compiles our executable
 ds18b20 : $(OBJS1)
-		$(CC) $(OBJS1) $(COMPILER_FLAGS) $(LINKER_FLAGS) 
+		$(CC) $(OBJS1) $(LINKER_FLAGS) 
 app : $(OBJS2)
-		$(CC) $(OBJS2) $(COMPILER_FLAGS) $(LINKER_FLAGS) 
+		$(CC) $(OBJS2) $(LINKER_FLAGS) 
 
