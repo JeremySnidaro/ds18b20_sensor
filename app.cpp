@@ -38,6 +38,7 @@ configuration App::load_config()
 												 	 "Raspberry",
 													 "numero_raspberry",
 													 NULL);
+	cout << "after the first config variable " << endl;
 	// [Database]
 	config.ip_server = g_key_file_get_string (gkf,
 											  "Database",
