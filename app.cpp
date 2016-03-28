@@ -13,7 +13,6 @@ App::App (const char* path_config_file)
 	config_file = path_config_file;
 	vector<string> sensor_list = list_sensor
 							   	("/sys/bus/w1/devices/w1_bus_master1/");
-	cout << sensor_list[0];
 }
 
 App::~App()
@@ -52,11 +51,11 @@ configuration App::load_config()
 
 
 	// [Sensor]
-	//config.time_between_two_value = g_key_file_get_double 
-	//											   (gkf,
-	//												"Sensor",
-	//												"time_between_two_value",
-	//												NULL);
+	config.time_between_two_value = g_key_file_get_double 
+												   (gkf,
+													"Sensor",
+													"time_between_two_value",
+													NULL);
 
 	config.many_sensor = g_key_file_get_integer (gkf,
 											 	 "Sensor", 
