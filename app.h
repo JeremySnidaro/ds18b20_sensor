@@ -2,6 +2,7 @@
 #include <string>
 
 using namespace std;
+
 struct configuration
 {
 	// [Raspberry]
@@ -29,7 +30,7 @@ class App
 	public :
 		App();
 		~App();
-		vector<string> list_sensor( const char* path );
-		configuration load_config( const char* path );
+		vector<string> list_sensor (const char* path);
+		configuration load_config (const char* path);
 
 };

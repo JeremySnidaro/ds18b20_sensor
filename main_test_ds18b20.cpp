@@ -56,7 +56,10 @@ int main()
 	// START stuff about the config file ......
 
 	// we will check on the main app if many_sensor if on 0 or 1 for 1
-	int many_sensor = g_key_file_get_integer(gkf, "Sensor", "many_sensor", NULL);
+	int many_sensor = g_key_file_get_integer(gkf,
+											 "Sensor",
+											 "many_sensor",
+											 NULL);
 	cout << many_sensor << endl;
 	// we need to free before leaving
 	g_key_file_free(gkf);
@@ -70,8 +73,11 @@ int main()
 	{
 		sensor_list = list_dir( "/sys/bus/w1/devices/w1_bus_master1/" );
 		cout << sensor_list[0] << endl;
-		//just create one ds18b20 instance for more use for loop and check the directory
-	    Ds18b20 *sensor = new Ds18b20( base_dir + sensor_list[0] + "/w1_slave" );
+		// just create one ds18b20 instance
+		// for more use for loop and check the directory
+	    Ds18b20 *sensor = new Ds18b20( base_dir +
+									   sensor_list[0] +
+									   "/w1_slave" );
 		float temp; 
 		for (int i=0; i<10; i++)
 		{
