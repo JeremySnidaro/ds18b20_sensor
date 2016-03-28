@@ -1,3 +1,5 @@
+correct the segmentation fault in app, load_config()
+
 add logfile to handle error log especially for crc
 
 read 'How linux works' book for the compilation and handling source part, see also make and thing about init.d, /etc/default ... P329+
