@@ -13,6 +13,7 @@ App::App (const char* path_config_file)
 	config_file = path_config_file;
 	vector<string> sensor_list = list_sensor
 							   	("/sys/bus/w1/devices/w1_bus_master1/");
+	cout << "In the constructor " << endl;
 }
 
 App::~App()
@@ -31,6 +32,7 @@ configuration App::load_config()
         fprintf (stderr, "Could not read config file %s\n", config_file);
     }	
 
+	cout << "after opened the config file " << endl;
 	// [Raspberry]
 	config.numero_raspberry = g_key_file_get_string (gkf,
 												 	 "Raspberry",
@@ -66,6 +68,7 @@ configuration App::load_config()
 	// free before leaving
 	g_key_file_free (gkf);
 
+	cout << "befor the return config" << endl;
 	return config;
 }
 
