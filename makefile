@@ -1,6 +1,6 @@
 #OBJS specifies which files to compile as part of the project 
 OBJS1 = main_test_ds18b20.cpp ds18b20.cpp
-OBJS2 = main_test_app.cpp app.cpp
+OBJS2 = main_test_app.cpp app.cpp ds18b20.cpp
 
 #CC specifies which compiler we're using
 CC = g++

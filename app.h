@@ -1,6 +1,8 @@
 #include <vector>
 #include <string>
 
+#include "ds18b20.h"
+
 using namespace std;
 
 struct configuration
@@ -33,5 +35,6 @@ class App
 		App (const char* path_config_file);
 		~App();
 		vector<string> list_sensor (const char* path);
+		vector<ds18b20> open_sensor();
 
 };
