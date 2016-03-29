@@ -17,7 +17,7 @@ App::App (const char* path_config_file)
 	config = load_config();
 	vector<Ds18b20*> sensors = open_sensor();
 	
-	if (config->many_sensor == 0)
+	if (config.many_sensor == 0)
 	{
 		float temp; 
 		for (int i=0; i<10; i++)
