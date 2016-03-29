@@ -14,7 +14,7 @@ App::App (const char* path_config_file)
 	vector<string> sensor_list = list_sensor
 							   	("/sys/bus/w1/devices/w1_bus_master1/");
 	config = load_config();
-	vector<*Ds18b20> sensors = open_sensor();
+	vector<Ds18b20*> sensors = open_sensor();
 
 }
 
@@ -100,9 +100,9 @@ vector<string> App::list_sensor (const char* path)
 	return sensors;
 }
 
-vector<*ds18b20> App::open_sensor()
+vector<Ds18b20*> App::open_sensor()
 {
-	vector<*Ds18b20> sensors;
+	vector<Ds18b20*> sensors;
 	string base_dir_sensor = "/sys/bus/w1/devices/";
 	vector<string> sensor_name;
 	sensor_name = list_dir( "/sys/bus/w1/devices/w1_bus_master1/" );
