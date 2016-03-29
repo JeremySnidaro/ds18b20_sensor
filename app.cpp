@@ -48,7 +48,7 @@ configuration App::load_config()
 
 	config.table = g_key_file_get_string (gkf, "Database", "table", NULL);
 
-	config.port = g_key_file_get_integer(gkf, "Database", "port", NULL);
+	config.port = g_key_file_get_integer (gkf, "Database", "port", NULL);
 
 
 	// [Sensor]
