@@ -2,6 +2,7 @@
 #include <dirent.h> // to list dir
 #include <glib.h>  // to read config file
 #include <stdio.h>
+#include <unistd.h> // to use sleep for test
 
 #include "app.h"
 
