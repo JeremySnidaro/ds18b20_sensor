@@ -15,6 +15,21 @@ App::App (const char* path_config_file)
 							   	("/sys/bus/w1/devices/w1_bus_master1/");
 	config = load_config();
 	vector<Ds18b20*> sensors = open_sensor();
+	
+	if (config->many_sensor == 0)
+	{
+		float temp; 
+		for (int i=0; i<10; i++)
+		{
+			temp = sensors[0]->read_temp();
+			cout << temp << endl;
+			sleep(1);
+		}
+	}
+	else
+	{
+		cout << " Code to use multiple sensor not ready " << endl;
+	}
 
 }
 
@@ -112,6 +127,7 @@ vector<Ds18b20*> App::open_sensor()
 										+ sensor_name[i]
 										+"/w1_slave") );
 	}
+
 	return sensors;
 }
 
