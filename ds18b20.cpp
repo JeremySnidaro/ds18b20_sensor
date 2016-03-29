@@ -53,9 +53,9 @@ string Ds18b20::read_temp_raw()
 	open_sensor();
 	string temp_line;
 	string raw_frame;
-    while( getline(sensor,temp_line) )
+    while(! sensor.eof() )
 	{
-      raw_frame += temp_line;
+		sensor >> raw_frame;
 	}
 
 	if( crc_check(raw_frame) )

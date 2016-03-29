@@ -17,7 +17,4 @@ the end of the project
 we also need to setup the variable in config.txt so we need the permission
 and know where is the file
 
-correct the error in ds18b20.cpp in read_temp_raw when we use the while with
-getline it modify sensor_file variable try to find why and correct it
-
 delete close_sensor() in ds18b20.cpp
