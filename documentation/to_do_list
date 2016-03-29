@@ -16,3 +16,5 @@ change the path to conf.txt in absolute path to /etc/default at
 the end of the project
 we also need to setup the variable in config.txt so we need the permission
 and know where is the file
+
+delete close_sensor() in ds18b20.cpp
