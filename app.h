@@ -35,6 +35,6 @@ class App
 		App (const char* path_config_file);
 		~App();
 		vector<string> list_sensor (const char* path);
-		vector<ds18b20> open_sensor();
+		vector<*Ds18b20> open_sensor();
 
 };
