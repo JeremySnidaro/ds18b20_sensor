@@ -28,10 +28,6 @@ int Ds18b20::open_sensor()
 	}
 }
 
-void Ds18b20::close_sensor()
-{
-	sensor.close();
-}
 
 int Ds18b20::crc_check(string raw_frame)
 {
@@ -60,7 +56,7 @@ string Ds18b20::read_temp_raw()
 
 	if( crc_check(raw_frame) )
 	{
-		close_sensor();
+		sensor.close();
 		return raw_frame;
 	}
 	else
@@ -71,7 +67,7 @@ string Ds18b20::read_temp_raw()
 			exit(-1);
 		}
 		cerr << "Error CRC check count_crc_error = " << count_crc_error << endl;
-		close_sensor();
+		sensor.close();
 		read_temp_raw();
 	}
 
