@@ -2,7 +2,7 @@
 #include <string>
 
 #include "ds18b20.h"
-#include "/sql_class/SqlDatabase/SqlDatabase.h"
+#include "sql_class/SqlDatabase/SqlDatabase.h"
 
 
 using namespace std;

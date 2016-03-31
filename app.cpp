@@ -42,8 +42,8 @@ App::~App()
 
 void App::open_db()
 {
-	db = new SqlDatabase (config.ip_server, config.user,
-						  config.pwd ,config.database);
+//	db = new SqlDatabase (config.ip_server, config.user,
+//						  config.pwd ,config.database);
 }
 
 void App::send_temp(float temp)
@@ -72,7 +72,7 @@ mysql> INSERT INTO tutorials_tbl
 //	db_check_entry();
 }
 
-void db_check_entry()
+void App::db_check_entry()
 {
 	// delete the entry oldest than 3 years
 }
