@@ -46,6 +46,11 @@ class App
 		vector<string> list_sensor (const char* path);
 		vector<Ds18b20*> open_sensor();
 
+		void open_db();
+		void send_temp (float temp);
+		void db_check_entry();
+
+
 };
 
 #endif

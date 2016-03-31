@@ -48,6 +48,7 @@ void App::open_db()
 
 void App::send_temp(float temp)
 {
+// send the temperature to the database
 /*
 mysql> INSERT INTO tutorials_tbl 
      ->(tutorial_title, tutorial_author, submission_date)
