@@ -12,11 +12,13 @@ using namespace std;
 App::App (const char* path_config_file)
 {
 	config_file = path_config_file;
+	config = load_config();
+	
+
+
+	vector<Ds18b20*> sensors = open_sensor();
 	vector<string> sensor_list = list_sensor
 							   	("/sys/bus/w1/devices/w1_bus_master1/");
-	config = load_config();
-	vector<Ds18b20*> sensors = open_sensor();
-	
 	if (config.many_sensor == 0)
 	{
 		float temp; 
@@ -36,6 +38,17 @@ App::App (const char* path_config_file)
 
 App::~App()
 {
+}
+
+void App::open_db()
+{
+	db = new SqlDatabase (config.ip_server, config.user,
+						  config.pwd ,config.database);
+}
+
+void App::send_temp(float temp)
+{
+	db->sendQuery();	
 }
 
 configuration App::load_config()

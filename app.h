@@ -2,6 +2,8 @@
 #include <string>
 
 #include "ds18b20.h"
+#include "/sql_class/SqlDatabase/SqlDatabase.h"
+
 
 using namespace std;
 
@@ -31,6 +33,10 @@ class App
 
 	const char* config_file;
 	configuration config;
+	
+
+	SqlDatabase* db; 
+
 
 	configuration load_config();
 
