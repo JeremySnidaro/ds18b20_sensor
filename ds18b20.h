@@ -2,6 +2,9 @@
 
 using namespace std;
 
+#ifned DS18B20_H_
+#define DS18B20_H_
+
 class Ds18b20
 {
 	ifstream sensor;
@@ -16,3 +19,5 @@ class Ds18b20
 		int crc_check(string raw_frame);
 	
 };
+
+#endif

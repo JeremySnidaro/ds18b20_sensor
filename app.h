@@ -23,6 +23,9 @@ struct configuration
 	string sensor_file;
 };
 
+#ifned App_H_
+#define App_H_
+
 class App
 {
 
@@ -38,3 +41,5 @@ class App
 		vector<Ds18b20*> open_sensor();
 
 };
+
+#endif
