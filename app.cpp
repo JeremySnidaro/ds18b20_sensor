@@ -48,7 +48,32 @@ void App::open_db()
 
 void App::send_temp(float temp)
 {
-	db->sendQuery();	
+/*
+mysql> INSERT INTO tutorials_tbl 
+     ->(tutorial_title, tutorial_author, submission_date)
+     ->VALUES
+     ->("Learn PHP", "John Poul", NOW());
+*/
+/*
+	// the float to string conversion not tested
+	ostringstream buf;
+	buf << temp;
+	string temp_str (buf.str());
+
+	db->sendQuery("INSERT INTO " + config.table_name 
+								 + config.field1_numero_raspberry 
+								 + config.field2_room 
+								 + config.field3_temperature 
+								 + " VALUES " 
+								 + temp_str + config.numero_raspberry
+								 + config.room);	
+*/
+//	db_check_entry();
+}
+
+void db_check_entry()
+{
+	// delete the entry oldest than 3 years
 }
 
 configuration App::load_config()
