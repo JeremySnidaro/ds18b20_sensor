@@ -23,7 +23,7 @@ struct configuration
 	string sensor_file;
 };
 
-#ifned App_H_
+#ifndef App_H_
 #define App_H_
 
 class App
