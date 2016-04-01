@@ -18,7 +18,7 @@ App::App (const char* path_config_file)
 
 	vector<Ds18b20*> sensors = open_sensor();
 	vector<string> sensor_list = list_sensor
-							   	("/sys/bus/w1/devices/w1_bus_master1/");
+                                 ("/sys/bus/w1/devices/w1_bus_master1/");
 	if (config.many_sensor == 0)
 	{
 		float temp; 
