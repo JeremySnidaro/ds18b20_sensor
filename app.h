@@ -14,9 +14,11 @@ struct configuration
 	
 	// [Database]
 	string ip_server;
+	string database;
 	string user;
 	string pwd;
 	string table;
+	string field;
 	int port;
 
 	// [Sensor]

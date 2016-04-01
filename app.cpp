@@ -99,6 +99,12 @@ configuration App::load_config()
 											  "Database",
 										      "ip_server",
 										      NULL);
+
+	config.database = g_key_file_get_string (gkf,
+											 "Database",
+											 "database",
+											 NULL);
+
 	config.user = g_key_file_get_string (gkf, "Database", "user", NULL);
 
 	config.pwd = g_key_file_get_string (gkf, "Database", "pwd", NULL);
