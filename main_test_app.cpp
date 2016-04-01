@@ -6,6 +6,6 @@ using namespace std;
 
 int main()
 { 
-	App *app = new App ("./conf.txt");
-	return 0;
+    App *app = new App ("./conf.txt");
+    return 0;
 }

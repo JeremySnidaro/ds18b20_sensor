@@ -5,13 +5,13 @@
 
 
 SqlDatabase::SqlDatabase (const char* ipServer,
-						  const char* user,
-						  const char* password,
-						  const char* database)
+                          const char* user,
+                          const char* password,
+                          const char* database)
 {
   mysql_init (&mysql);
   connection = mysql_real_connect (&mysql,ipServer,
-								   user,password,database,0,0,0);
+                                   user,password,database,0,0,0);
   if (connection == NULL)
   {
     printf (mysql_error (&mysql));
@@ -44,15 +44,15 @@ const char** SqlDatabase::sendQuery (const char* query)
     while ((row = mysql_fetch_row (result)))
       {
        for(int i = 0; i < num_column; i++)
-	{
+    {
            // Make sure row[i] is valid!
            if(row[i] != NULL)
-	   {
+       {
                 resultQuery[i] = row[i];
-	   }
+       }
            else
                 resultQuery[i]= "NULL";
-	}
+    }
       }
     return resultQuery;   
   }

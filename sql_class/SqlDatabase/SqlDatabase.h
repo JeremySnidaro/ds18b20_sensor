@@ -13,7 +13,7 @@ class SqlDatabase
 
 public:
   SqlDatabase (const char* ipServer,const char* user,
-			   const char* password,const char* database);
+               const char* password,const char* database);
   ~SqlDatabase();
   
   const char** sendQuery (const char* query);
