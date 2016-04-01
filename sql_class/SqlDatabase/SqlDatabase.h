@@ -1,7 +1,7 @@
 #include <mysql.h>
 
-#ifndef SQLDATABASE_H_
-#define SQLDATABASE_H_
+#ifndef SQL_DATABASE_H_
+#define SQL_DATABASE_H_
 
 
 class SqlDatabase
@@ -12,13 +12,14 @@ class SqlDatabase
     MYSQL_RES *result;
 
 public:
-  SqlDatabase(const char* ipServer,const char* user,
-			  const char* password,const char* database);
+  SqlDatabase (const char* ipServer,const char* user,
+			   const char* password,const char* database);
   ~SqlDatabase();
   
-  const char** sendQuery(const char* query);
-  bool isPresent(const char* query);
+  const char** sendQuery (const char* query);
+  bool isPresent (const char* query);
   
 };
 
-#endif
+#endif // SQL_DATABASE_H_
+

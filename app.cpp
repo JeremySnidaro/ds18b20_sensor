@@ -46,7 +46,7 @@ void App::open_db()
 //						  config.pwd ,config.database);
 }
 
-void App::send_temp(float temp)
+void App::send_temp (float temp)
 {
 // send the temperature to the database
 /*
@@ -166,12 +166,12 @@ vector<Ds18b20*> App::open_sensor()
 	vector<Ds18b20*> sensors;
 	string base_dir_sensor = "/sys/bus/w1/devices/";
 	vector<string> sensor_name;
-	sensor_name = list_sensor( "/sys/bus/w1/devices/w1_bus_master1/" );
+	sensor_name = list_sensor ("/sys/bus/w1/devices/w1_bus_master1/");
 	for (int i=0; i < sensor_name.size(); i++)
 	{
-		sensors.push_back(new Ds18b20 ( base_dir_sensor
-										+ sensor_name[i]
-										+"/w1_slave") );
+		sensors.push_back(new Ds18b20 (base_dir_sensor
+									   + sensor_name[i]
+									   + "/w1_slave") );
 	}
 
 	return sensors;
