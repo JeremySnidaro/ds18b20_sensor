@@ -91,9 +91,9 @@ configuration App::load_config()
 
 	// [Raspberry]
 	config.numero_raspberry = g_key_file_get_string (gkf,
-												 	 "Raspberry",
-													 "numero_raspberry",
-													 NULL);
+                                                     "Raspberry",
+                                                     "numero_raspberry",
+                                                     NULL);
 	// [Database]
 	config.ip_server = g_key_file_get_string (gkf,
 											  "Database",
