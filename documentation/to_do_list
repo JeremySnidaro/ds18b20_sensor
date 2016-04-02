@@ -11,6 +11,9 @@ how we know which sensor is in which room ?
 
 test class to send query in c++ and add it to the main class(create one)
 
+rewrite the Sqldatabase class don't working good espcially the send_query 
+it works if we return nothing so no select
+
 
 change the path to conf.txt in absolute path to /etc/default at
 the end of the project
