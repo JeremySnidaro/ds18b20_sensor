@@ -64,11 +64,16 @@ mysql> INSERT INTO tutorials_tbl
     string temp_str (buf.str());
    
     string query = "INSERT INTO" + string (config.table)
-                                 + "(" string (config.column1)","
-                                 + string (config.column2) ")"
+                                 + "(" 
+                                    + string (config.column1) 
+                                    + ","
+                                    + string (config.column2) 
+                                 + ")"
                                  + " VALUES " 
-                                 + "(\"" string (config.numero_raspberry) "\","
-                                 + temp_str;
+                                 + "(\"" 
+                                    + string (config.numero_raspberry) 
+                                 + "\","
+                                    + temp_str;
 
 // the request look like this
 // INSERT INTO salle (numero_raspberry,temp) VALUES ("42",23.32)
