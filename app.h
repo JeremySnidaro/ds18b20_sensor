@@ -1,5 +1,4 @@
 #include <vector>
-#include <string>
 
 #include "ds18b20.h"
 #include "sql_class/SqlDatabase/SqlDatabase.h"
@@ -10,21 +9,21 @@ using namespace std;
 struct configuration
 {
     // [Raspberry]
-    string numero_raspberry;    
+    const char* numero_raspberry;    
     
     // [Database]
-    string ip_server;
-    string database;
-    string user;
-    string pwd;
-    string table;
-    string column1;
-    string column2;
+    const char* ip_server;
+    const char* database;
+    const char* user;
+    const char* pwd;
+    const char* table;
+    const char* column1;
+    const char* column2;
 
     // [Sensor]
     float time_between_two_value;
     int many_sensor;
-    string sensor_file;
+    const char* sensor_file;
 };
 
 #ifndef APP_H_
