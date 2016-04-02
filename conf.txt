@@ -4,13 +4,13 @@
 numero_raspberry = 42 
 
 [Database]
-ip_server = 192.168.0.1
+ip_server = 192.168.1.43
 user = tux
 pwd = gnu
-database =
-table = room
-field = 
-port = 334
+database = temp
+table = salle
+column1 = numero_raspberry
+column2 = temp
 
 [Sensor]
 time_between_two_value = 32.13 

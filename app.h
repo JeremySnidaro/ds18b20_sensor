@@ -18,8 +18,8 @@ struct configuration
     string user;
     string pwd;
     string table;
-    string field;
-    int port;
+    string column1;
+    string column2;
 
     // [Sensor]
     float time_between_two_value;

@@ -111,8 +111,9 @@ configuration App::load_config()
 
     config.table = g_key_file_get_string (gkf, "Database", "table", NULL);
 
-    config.port = g_key_file_get_integer (gkf, "Database", "port", NULL);
+    config.column1 = g_key_file_get_string (gkf, "Database", "column1", NULL);
 
+    config.column2 = g_key_file_get_string (gkf, "Database", "column2", NULL);
 
     // [Sensor]
     config.time_between_two_value = g_key_file_get_double 
