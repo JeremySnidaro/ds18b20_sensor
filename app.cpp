@@ -58,17 +58,20 @@ mysql> INSERT INTO tutorials_tbl
      ->("Learn PHP", "John Poul", NOW());
 */
 
-    // the float to string conversion not tested
+    // the float to string conversion not tested no error while compiled
     ostringstream buf;
     buf << temp;
     string temp_str (buf.str());
    
     string query = "INSERT INTO" + string (config.table)
-                                 + string (config.column1)
-                                 + string (config.column2) 
+                                 + "(" string (config.column1)","
+                                 + string (config.column2) ")"
                                  + " VALUES " 
-                                 + string (config.numero_raspberry)
+                                 + "(\"" string (config.numero_raspberry) "\","
                                  + temp_str;
+
+// the request look like this
+// INSERT INTO salle (numero_raspberry,temp) VALUES ("42",23.32)
 
 
 
