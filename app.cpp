@@ -41,7 +41,7 @@ App::~App()
 {
 }
 
-void App::open_db(SqlDatabase* db)
+void App::open_db()
 {
     db = new SqlDatabase (config.ip_server, config.user,
                           config.pwd ,config.database);
