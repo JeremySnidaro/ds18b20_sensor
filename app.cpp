@@ -3,6 +3,7 @@
 #include <glib.h>  // to read config file
 #include <stdio.h>
 #include <unistd.h> // to use sleep for test
+#include <sstream>
 
 #include "app.h"
 
@@ -55,20 +56,23 @@ mysql> INSERT INTO tutorials_tbl
      ->VALUES
      ->("Learn PHP", "John Poul", NOW());
 */
-/*
+
     // the float to string conversion not tested
     ostringstream buf;
     buf << temp;
     string temp_str (buf.str());
-
-    db->sendQuery("INSERT INTO " + config.table_name 
-                                 + config.field1_numero_raspberry 
-                                 + config.field2_room 
-                                 + config.field3_temperature 
+   
+    string query = "INSERT INTO" + string (config.table)
+                                 + string (config.column1)
+                                 + string (config.column2) 
                                  + " VALUES " 
-                                 + temp_str + config.numero_raspberry
-                                 + config.room);    
-*/
+                                 + string (config.numero_raspberry)
+                                 + temp_str;
+
+
+
+    db->sendQuery (query.c_str());
+
 //  db_check_entry();
 }
 
