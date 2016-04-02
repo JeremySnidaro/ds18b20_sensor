@@ -1,7 +1,7 @@
 # Config file
 
 [Raspberry]
-numero_raspberry = 42 
+numero_raspberry = 42
 
 [Database]
 ip_server = 192.168.1.43

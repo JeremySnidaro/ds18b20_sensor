@@ -52,6 +52,8 @@ void App::send_temp (float temp)
 {
 // send the temperature to the database
 /*
+sql request to insert data look like this :
+
 mysql> INSERT INTO tutorials_tbl 
      ->(tutorial_title, tutorial_author, submission_date)
      ->VALUES
@@ -63,17 +65,18 @@ mysql> INSERT INTO tutorials_tbl
     buf << temp;
     string temp_str (buf.str());
    
-    string query = "INSERT INTO" + string (config.table)
-                                 + "(" 
+    string query = "INSERT INTO " + string (config.table)
+                                 + " (" 
                                     + string (config.column1) 
                                     + ","
                                     + string (config.column2) 
-                                 + ")"
-                                 + " VALUES " 
+                                 + ") "
+                                 + "VALUES " 
                                  + "(\"" 
                                     + string (config.numero_raspberry) 
                                  + "\","
-                                    + temp_str;
+                                    + temp_str
+                                 + ")";
 
 // the request look like this
 // INSERT INTO salle (numero_raspberry,temp) VALUES ("42",23.32)
