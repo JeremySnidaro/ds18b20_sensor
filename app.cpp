@@ -27,6 +27,7 @@ App::App (const char* path_config_file)
         {
             temp = sensors[0]->read_temp();
             cout << temp << endl;
+            send_temp(temp);
             sleep(1);
         }
     }
