@@ -42,8 +42,8 @@ App::~App()
 
 void App::open_db()
 {
-//  db = new SqlDatabase (config.ip_server, config.user,
-//                        config.pwd ,config.database);
+  db = new SqlDatabase (config.ip_server, config.user,
+                        config.pwd ,config.database);
 }
 
 void App::send_temp (float temp)
