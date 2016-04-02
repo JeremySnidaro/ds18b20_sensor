@@ -15,17 +15,18 @@ App::App (const char* path_config_file)
     config_file = path_config_file;
     config = load_config();
     
-    vector<Ds18b20*> sensors = open_sensor();
 
     if (config.many_sensor == 0)
     {
         float temp; 
         for (int i=0; i<10; i++)
         {
+            vector<Ds18b20*> sensors = open_sensor();
             temp = sensors[0]->read_temp();
             cout << temp << endl;
             open_db();
             send_temp(temp);
+            delete db;
             sleep(1);
         }
     }
@@ -40,10 +41,10 @@ App::~App()
 {
 }
 
-void App::open_db()
+void App::open_db(SqlDatabase* db)
 {
-  db = new SqlDatabase (config.ip_server, config.user,
-                        config.pwd ,config.database);
+    db = new SqlDatabase (config.ip_server, config.user,
+                          config.pwd ,config.database);
 }
 
 void App::send_temp (float temp)
