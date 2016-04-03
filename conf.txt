@@ -11,6 +11,7 @@ database = temp
 table = salle
 column1 = numero_raspberry
 column2 = temp
+column_date = date_created
 
 [Sensor]
 time_between_two_value = 32.13 
