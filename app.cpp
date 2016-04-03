@@ -133,6 +133,10 @@ configuration App::load_config()
 
     config.column2 = g_key_file_get_string (gkf, "Database", "column2", NULL);
 
+    config.column_date = g_key_file_get_string (gkf,
+                                                "Database",
+                                                "column_date",
+                                                NULL);
     // [Sensor]
     config.time_between_two_value = g_key_file_get_double 
                                                    (gkf,

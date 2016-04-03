@@ -19,6 +19,7 @@ struct configuration
     const char* table;
     const char* column1;
     const char* column2;
+    const char* column_date;
 
     // [Sensor]
     float time_between_two_value;
