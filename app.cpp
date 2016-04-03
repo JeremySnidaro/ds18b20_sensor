@@ -92,7 +92,7 @@ void App::db_check_entry()
                  + " WHERE " + string (config.column_date)
                  + " < UNIX_TIMESTAMP(DATE_SUB(NOW(), INTERVAL 1 MINUTE))";
 
-    db_sendQuery (query.c_str());
+    db->sendQuery (query.c_str());
 }
 
 configuration App::load_config()
