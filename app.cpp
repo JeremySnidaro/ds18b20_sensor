@@ -58,8 +58,6 @@ mysql> INSERT INTO tutorials_tbl
      ->VALUES
      ->("Learn PHP", "John Poul", NOW());
 */
-
-    // the float to string conversion not tested no error while compiled
     ostringstream buf;
     buf << temp;
     string temp_str (buf.str());
@@ -80,16 +78,21 @@ mysql> INSERT INTO tutorials_tbl
 // the request look like this
 // INSERT INTO salle (numero_raspberry,temp) VALUES ("42",23.32)
 
-
-
     db->sendQuery (query.c_str());
 
-//  db_check_entry();
+    db_check_entry();
 }
 
 void App::db_check_entry()
 {
-    // delete the entry oldest than 3 years
+// delete the entry oldest than 3 years
+// DELETE FROM config.table
+// WHERE config.column_date < UNIX_TIMSTAMP(DATE_SUB(NOW(), INTERVAL (365*3) DAY))
+    string query = "DELETE FROM " + config.table
+                 + " WHERE " + config.column_date
+                 + " < UNIX_TIMESTAMP(DATE_SUB(NOW(), INTERVAL 1 MINUTE))";
+
+    db_sendQuery (query.c_str());
 }
 
 configuration App::load_config()
