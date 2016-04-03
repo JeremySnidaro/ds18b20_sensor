@@ -88,8 +88,8 @@ void App::db_check_entry()
 // delete the entry oldest than 3 years
 // DELETE FROM config.table
 // WHERE config.column_date < UNIX_TIMSTAMP(DATE_SUB(NOW(), INTERVAL (365*3) DAY))
-    string query = "DELETE FROM " + config.table
-                 + " WHERE " + config.column_date
+    string query = "DELETE FROM " + string (config.table)
+                 + " WHERE " + string (config.column_date)
                  + " < UNIX_TIMESTAMP(DATE_SUB(NOW(), INTERVAL 1 MINUTE))";
 
     db_sendQuery (query.c_str());
