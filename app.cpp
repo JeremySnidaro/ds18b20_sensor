@@ -80,7 +80,7 @@ mysql> INSERT INTO tutorials_tbl
 
     db->sendQuery (query.c_str());
 
-    db_check_entry();
+    //db_check_entry();
 }
 
 void App::db_check_entry()
@@ -133,10 +133,6 @@ configuration App::load_config()
 
     config.column2 = g_key_file_get_string (gkf, "Database", "column2", NULL);
 
-    config.column_date = g_key_file_get_string (gkf,
-                                                "Database",
-                                                "column_date",
-                                                NULL);
     // [Sensor]
     config.time_between_two_value = g_key_file_get_double 
                                                    (gkf,
