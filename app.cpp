@@ -10,7 +10,7 @@
 using namespace std;
 
 
-App::App (const char* path_config_file)
+App::App (string path_config_file)
 {
     config_file = path_config_file;
     config = load_config();
@@ -102,9 +102,10 @@ configuration App::load_config()
     gkf = g_key_file_new();
     
     // Loads the config file and tests that everything went OK .
-    if (!g_key_file_load_from_file (gkf, config_file, G_KEY_FILE_NONE, NULL))
+    if (!g_key_file_load_from_file (gkf, config_file.c_str(), G_KEY_FILE_NONE, NULL))
     {
-        fprintf (stderr, "Could not read config file %s\n", config_file);
+        fprintf (stderr, "Could not read config file %s\n",
+                 config_file.c_str());
     }   
 
     // [Raspberry]
