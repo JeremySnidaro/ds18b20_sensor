@@ -17,14 +17,18 @@ and know where is the file
 Put the program(service) in /etc/init.d/?
 http://askubuntu.com/questions/18802/how-to-correctly-add-a-custom-daemon-to-init-d
 
+http://www.netzmafia.de/skripten/unix/linux-daemon-howto.html
+
 Put the configuration file in /etc/default/name_of_the_program_in_init.d/
 read documentation about that
 http://askubuntu.com/questions/18802/how-to-correctly-add-a-custom-daemon-to-init-d
 
-Check the pointer problem in app.h and app.cpp config struct with const char*
+Ask to my professor if the problem is solved with string instead of const char*
+check the pointer problem in app.h and app.cpp config struct with const char*
 
 Check how to use ./configure make and make install 
 
-Use signal alerte for the timer between two value
+Use other method to set the timer between the value check this code : 
+http://stackoverflow.com/questions/10807681/loop-every-10-second
 
 Remove all cout and printf from the code and replace them by a logfile
