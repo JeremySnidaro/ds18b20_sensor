@@ -43,8 +43,8 @@ App::~App()
 
 void App::open_db()
 {
-    db = new SqlDatabase (config.ip_server, config.user,
-                          config.pwd ,config.database);
+    db = new SqlDatabase (config.ip_server.c_str(), config.user.c_str(),
+                          config.pwd.c_str() ,config.database.c_str());
 }
 
 void App::send_temp (float temp)
@@ -62,15 +62,15 @@ mysql> INSERT INTO tutorials_tbl
     buf << temp;
     string temp_str (buf.str());
    
-    string query = "INSERT INTO " + string (config.table)
+    string query = "INSERT INTO " + config.table
                                  + " (" 
-                                    + string (config.column1) 
+                                    + config.column1 
                                     + ","
-                                    + string (config.column2) 
+                                    + config.column2 
                                  + ") "
                                  + "VALUES " 
                                  + "(\"" 
-                                    + string (config.numero_raspberry) 
+                                    + config.numero_raspberry 
                                  + "\","
                                     + temp_str
                                  + ")";
