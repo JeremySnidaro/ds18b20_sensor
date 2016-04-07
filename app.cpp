@@ -157,13 +157,13 @@ configuration App::load_config()
     return config;
 }
 
-vector<string> App::list_sensor (const char* path)
+vector<string> App::list_sensor (string path)
 {
     vector<string> sensors;
 
     struct dirent *entry;
     DIR *dir;
-    dir = opendir (path);
+    dir = opendir (path.c_str());
 
     while ((entry = readdir (dir)) != NULL)
     {

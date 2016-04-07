@@ -45,7 +45,7 @@ class App
     public :
         App (string path_config_file);
         ~App();
-        vector<string> list_sensor (const char* path);
+        vector<string> list_sensor (string path);
         vector<Ds18b20*> open_sensor();
 
         void open_db();
