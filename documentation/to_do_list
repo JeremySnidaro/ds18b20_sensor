@@ -14,3 +14,11 @@ the end of the project
 we also need to setup the variable in config.txt so we need the permission
 and know where is the file
 
+Put the program(service) in /etc/init.d/?
+
+Put the configuration file in /etc/default/name_of_the_program_in_init.d/
+read documentation about that
+
+Check the pointer problem in app.h and app.cpp config struct with const char*
+
+Check how to use ./configure make and make install 
