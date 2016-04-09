@@ -77,8 +77,8 @@ string Ds18b20::read_temp_raw()
 
 float Ds18b20::read_temp()
 {
-    string raw_frame = read_temp_raw(); // check if raw_frame don't get the cerr error
-    string str_temperature = raw_frame.substr( raw_frame.find_last_of("t=")+1 );//check if the t don't broke this
+    string raw_frame = read_temp_raw();
+    string str_temperature = raw_frame.substr( raw_frame.find_last_of("t=")+1 );
 
     float temperature = atoi( str_temperature.c_str() ); 
     temperature = temperature / 1000;
