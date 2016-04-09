@@ -14,7 +14,9 @@ the end of the project
 we also need to setup the variable in config.txt so we need the permission
 and know where is the file
 
-Put the program(service) in /etc/init.d/?
+Put the program in /usr/sbin/ or bin ?
+
+Create a basic script in /etc/init.d/
 http://askubuntu.com/questions/18802/how-to-correctly-add-a-custom-daemon-to-init-d
 
 http://www.netzmafia.de/skripten/unix/linux-daemon-howto.html
@@ -24,7 +26,6 @@ read documentation about that
 http://askubuntu.com/questions/18802/how-to-correctly-add-a-custom-daemon-to-init-d
 
 Ask to my professor if the problem is solved with string instead of const char*
-check the pointer problem in app.h and app.cpp config struct with const char*
 
 Check how to use ./configure make and make install 
 
