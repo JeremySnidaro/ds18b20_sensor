@@ -29,3 +29,5 @@ Use other method to set the timer between the value check this code :
 http://stackoverflow.com/questions/10807681/loop-every-10-second
 
 Remove all cout and printf from the code and replace them by a logfile
+
+Add README and INSTALL while unpack source code
