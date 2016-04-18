@@ -10,7 +10,7 @@ the end of the project
 we also need to setup the variable in config.txt so we need the permission
 and know where is the file
 
-Put the program in /usr/sbin/ or bin ?
+Put the program in /usr/local/bin
 
 Create a basic script in /etc/init.d/
 http://askubuntu.com/questions/18802/how-to-correctly-add-a-custom-daemon-to-init-d
